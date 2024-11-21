@@ -1,15 +1,15 @@
 class Queue:
-    def __init__():
+    def __init__(self):
         self.items = []
 
-    def enqueue(x):
+    def enqueue(self, x):
         self.items.append(x)
 
-    def dequeue():
+    def dequeue(self):
         return self.items.pop(0)
 
-    def display()
-    print(self.items)
+    def display(self):
+        print(self.items)
 
 teddy = Queue()
 teddy.enqueue(1)
