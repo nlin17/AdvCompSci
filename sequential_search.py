@@ -17,8 +17,8 @@ def sequential_search(e, collection):
 
 
 def binary_search(element, collection):
-    if not collection: return False
-    
+    if not collection or element not in collection: return False
+
 
     def helper(element, collection, start, stop):
         
@@ -39,7 +39,6 @@ def binary_search(element, collection):
         else:
             stop = collection[halfway]
 
-        prev_halfway = halfway
         helper(element, collection, start, stop)
 
     helper(element, collection, collection[0], collection[-1])
