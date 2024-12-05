@@ -17,15 +17,17 @@ def sequential_search(e, collection):
 
 
 def binary_search(element, collection):
-    if not collection or element not in collection: return False
+    # if not collection or element not in collection: return False
 
 
     def helper(element, collection, start, stop):
+        if stop <= start: 
+            return -1
         
         halfway = (collection.index(stop) - collection.index(start)) // 2
         if halfway == 0 and collection.index(stop) == len(collection) - 1:
             halfway = 1
-        halfway = int(halfway) + collection.index(start)
+        halfway += collection.index(start)
 
         print(f"guess: {collection[halfway]}")
 
@@ -50,4 +52,4 @@ def binary_search(element, collection):
     # recursive, use helper function
     
 collection = [1, 4, 5, 7, 9, 14, 18, 19, 25]
-binary_search(1, collection)
+binary_search(19, collection)
