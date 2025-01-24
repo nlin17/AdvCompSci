@@ -30,7 +30,10 @@ def hash(string):
 
     hash = 0
     for i in string.lower():
-        hash += letters[i]
+        if i == ' ':
+            pass
+        else:
+            hash += letters[i]
     return hash % 100
 
 print(hash('hi'))
